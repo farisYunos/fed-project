@@ -1,0 +1,37 @@
+{
+    "products": [
+       {
+         "id": 1, 
+         "name": "Programming in Java",
+          "description":"Learn how to code in Java with high-level OOP.",
+          "price": 199,
+          "imgPath": "img/java.jpg",
+          "schedule":"Starting in July 2019"
+       },
+       {
+         "id": 2, 
+         "name": "Programming in .Net",
+          "description":"Learn the popular Microsoft programming language.",
+          "price": 189,
+          "imgPath": "img/dotnetlogo.jpg",
+          "schedule":"Starting in July 2019"
+       },
+       {
+         "id": 3, 
+         "name": "Microsoft Office",
+          "description":"Microsoft Office is a family of client software, server software, and services developed by Microsoft. ",
+          "price": 179,
+          "imgPath": "img/microsoft-office-logo.jpg",
+          "schedule":"Starting in July 2019"
+       },
+       {
+         "id": 4, 
+         "name": "HTML",
+          "description":"Learn the fundamental mark up language.",
+          "price": 139,
+          "imgPath": "img/html5.jpg",
+          "schedule":"Starting in July 2019"
+       }
+   ]
+   }
+   

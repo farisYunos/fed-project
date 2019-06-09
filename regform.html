@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script type = "text/javascript">
+      function validate() {
+      
+      if( document.myForm.firstName.value == "" ) {
+         alert( "Please provide your first name!" );
+         document.myForm.firstName.focus() ;
+         return false;
+      }
+      if( document.myForm.lastName.value == "" ) {
+         alert( "Please provide your last name!" );
+         document.myForm.lastName.focus() ;
+         return false;
+      }
+      if( document.myForm.email.value == "" ) {
+         alert( "Please provide your Email!" );
+         document.myForm.email.focus() ;
+         return false;
+      }
+     
+      return( true );
+   }
+      
+   </script>      
+   <script type = "text/javascript">
+    
+       function validateEmail() {
+          var emailID = document.myForm.email.value;
+          atpos = emailID.indexOf("@");
+          dotpos = emailID.lastIndexOf(".");
+          
+          if (atpos < 1 || ( dotpos - atpos < 2 )) {
+             alert("Please enter correct email ID")
+             document.myForm.email.focus() ;
+             return false;
+          }
+          return( true );
+       }
+    
+ </script>
+
+ 
+
+</head>
+
+<body>
+  <div class="register">
+    <div id="myForm">
+<form method="post" action="thanks.html" name="myForm" onsubmit="return !!(validate() & validateEmail());">
+<h2 style=" color: #FFF;
+text-align: center;
+font-weight: normal;
+font-size: 18px;
+margin-top: 60px;
+margin-bottom: 80px;">Registration Form</h2>
+
+<select name="title">
+<option value="mr">Mr.</option>
+<option value="mrs">Mrs.</option>
+<option value="ms">Ms.</option>
+<option value="mdm">Mdm.</option>
+<option value="dr">Dr.</option>
+<br/> 
+
+<input type="text" name="firstName" placeholder="First Name"><br/> 
+<input type="text" name="lastName" placeholder="Last Name"><br/> 
+<input type="email" name="email" placeholder="example@email.com"><br/> 
+Female<input type="radio" name="gender" value="female"><br/> 
+Male<input type="radio" name="gender" value="male"> 
+
+
+<select name="course" Select course>
+  <option value="java">Programming in Java</option>
+  <option value="dotnet">Programming in .Net</option>
+  <option value="microsoft">Microsoft Office</option>
+  <option value="html">HTML</option>
+  <br/>
+  <br/>
+  
+</select>
+<input style="width: 60%" type="submit" value="Submit">
+  <input style="width: 60%" type="reset">
+
+
+
+</div>
+</div>
+</article>
+</body>
+</html>

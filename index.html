@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Main Page</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+        
+    </head>
+    <body>
+<nav class="topbar">
+    <ul>
+        <a href="#" onclick="loadProducts()"><li>All Courses</li></a>
+    <a href="#" onclick="changePage('about.html')"><li>About Us</li></a>
+    <a href="#" onclick="changePage('contact.html')"><li>Contact Us</li></a>    
+    <a href="#" onclick="changePage('regform.html')"><li>Register</li></a>
+    </ul>
+</nav>
+
+<div id="topRightSection" style="float:right">
+        Select currency view: 
+        <select id="currencyview" name="" onchange="dropDownFunction()">
+        <option value="SGD">Singapore Dollar</option>
+        <option value="MYR">Malaysian Ringgit</option>
+        <option value="INR">India Rupee</option>
+        <option value="PHP">Philippine Peso</option>
+        <option value="IDR">Indonesian Rupiah</option>
+        </select>
+    </div>
+
+    <div class="content" id="content">
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    <script>
+    function changePage(url) {
+        $.ajax({
+            url:url,
+            success: function(data) {
+                $('#pageContent').html(data)
+            }
+        });
+    }
+        </script>
+
+<div class="clear"></div>
+<div id="dvProdList"> </div>
+<div class="clear"></div>
+<div id="pageContent"> Hello, welcome to ABC learning center. Feel free to navigate around the page. Please
+    choose which currency you want to view in.
+        <a href="#" onclick="changePage('contact.html')">Contact Us</a> if you have any enquiries.</div>
+</div>
+
+    </body>
+
+    <footer style="	width: 100%;
+	position: fixed;
+	bottom: 0%;">
+        <nav>
+            <ul style="width: 100%;
+            background-color: #DDD;
+            list-style: none;
+            padding: 0;
+            margin: 0;	
+            color: black;">
+                <li><a href="#" onclick="changePage('sitemap.html')">Sitemap</a></li>
+                <li><a href="#" onclick="changePage('privacy.html')">Privacy Policy</a></li>
+            </ul>
+
+        </nav>
+    </footer>
+</html>
